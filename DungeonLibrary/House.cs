@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public enum Type
+    public enum House
     {
-
+        Gryffindor,
+        Hufflepuff,
+        Ravenclaw,
+        Slytherin
     }
 }

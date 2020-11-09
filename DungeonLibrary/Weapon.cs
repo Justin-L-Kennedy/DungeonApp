@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Weapon
+    public class Weapon : Item
     {
         //Fields
         private int _minDamage;
         private int _maxDamage;
-        private string _name;
         private int _bonusHitChance;
 
         //Properties
@@ -35,11 +34,6 @@ namespace DungeonLibrary
             get { return _maxDamage; }
             set { _maxDamage = value; }
         }
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
         public int BonusHitChance
         {
             get { return _bonusHitChance; }
@@ -47,11 +41,10 @@ namespace DungeonLibrary
         }
 
         //Constructors
-        public Weapon(int minDamage, int maxDamage, string name, int bonusHitChance)
+        public Weapon(int id, string name, string namePlural, int minDamage, int maxDamage, int bonusHitChance) :base(id, name, namePlural)
         {
             MaxDamage = maxDamage;
             MinDamage = minDamage;
-            Name = name;
             BonusHitChance = bonusHitChance;
         }
 

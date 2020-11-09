@@ -31,14 +31,14 @@ namespace DungeonLibrary
             }
         }
 
-        public static void DoBattle(Player player, Enemy enemy)
+        public static void DoBattle(Player wizard, Enemy enemy)
         {
             //player attacks first
-            DoAttack(player, enemy);
+            DoAttack(wizard, enemy);
             //monster gets to attack next, if they are still alive
             if (enemy.Life > 0)
             {
-                DoAttack(enemy, player);
+                DoAttack(enemy, wizard);
             }
         }
     }
